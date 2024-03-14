@@ -1,3 +1,5 @@
+echo off
+
 echo Starting..
 
 echo Disabling Memory Compression
@@ -208,6 +210,7 @@ sc config WSearch start= disabled > nul
 sc stop W32Time > nul 
 sc config W32Time start= disabled > nul
 
+echo Please Restart
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BcastDVRUserService" /v Start /t REG_DWORD /d 00000004 /f > nul
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MessagingService" /v Start /t REG_DWORD /d 00000004 /f > nul
