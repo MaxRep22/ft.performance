@@ -1,5 +1,7 @@
 echo off
 
+cls
+
 echo Starting..
 
 echo Disabling Memory Compression
@@ -574,4 +576,6 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UnistoreSvc" /v St
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WpnUserService" /v Start /t REG_DWORD /d 00000004 /f > nul
 
-echo Please Restart
+cls
+
+echo DONE! Please Restart
