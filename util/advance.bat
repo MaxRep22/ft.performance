@@ -1,3 +1,5 @@
+echo off
+
 echo Starting..
 
 echo Disabling Memory Compression
