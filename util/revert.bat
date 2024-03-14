@@ -1,5 +1,7 @@
 @echo off
 
+echo Reverting
+
 sc config AJRouter start= demand > nul
 
 sc config AppXSvc start= demand > nul
@@ -341,6 +343,8 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MessagingService" 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PrintWorkflowUserSvc" /v Start /t REG_DWORD /d 00000002 /f > nul
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\OneSyncSvc" /v Start /t REG_DWORD /d 00000002 /f > nul
+
+echo Please Restart
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UserDataSvc" /v Start /t REG_DWORD /d 00000002 /f > nul
 
