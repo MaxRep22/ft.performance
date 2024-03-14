@@ -1,5 +1,7 @@
 @echo off
 
+cls
+
 echo Reverting
 
 sc config AJRouter start= demand > nul
@@ -344,7 +346,9 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PrintWorkflowUserS
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\OneSyncSvc" /v Start /t REG_DWORD /d 00000002 /f > nul
 
-echo Please Restart
+cls
+
+echo DONE! Please Restart
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UserDataSvc" /v Start /t REG_DWORD /d 00000002 /f > nul
 
